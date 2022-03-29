@@ -1,0 +1,659 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+/* ************ Root *************8888 */
+:root {
+  --body-background: #0e0e0e;
+  --color-logo: #ff5b50;
+  --card-color: #252525;
+  --color-white: #fff;
+  --subtitle-color: #5a5757;
+  --black-text: #000;
+  --color-input: #0d0d0d;
+
+  /* ****** size dektop******* */
+  --size-widht: 1277px;
+  --size-mobile: 900pxpx;
+
+  /* ******************** */
+}
+/* font-family: Montserrat Font Weight: 400, 500, 700 */
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--body-background);
+}
+
+header {
+  background: url(./imgs/background.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+/* **************** */
+.navegacao {
+  width: var(--size-widht);
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  align-items: center;
+  margin-bottom: 90px;
+  padding-top: 90px;
+}
+
+.navegacao h1 {
+  color: var(--color-white);
+  font-size: 2.5rem;
+}
+
+.navegacao-list {
+  display: flex;
+  gap: 5rem;
+}
+.navegacao-list li a {
+  color: var(--color-white);
+}
+
+.navegacao-list li a:hover {
+  text-decoration: revert;
+}
+
+.logo-metaMask {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  background-color: var(--color-white);
+  padding: 10px;
+}
+.logo-metaMask img {
+  width: 30px;
+}
+
+.logo-metaMask a {
+  color: var(--black-text);
+  font-weight: 700;
+}
+
+.logo-nft {
+  color: var(--color-logo);
+}
+
+#menuMobile {
+  width: 50px;
+  height: 5px;
+  border-radius: 5px;
+  box-shadow: 0px 10px 0px var(--color-white), 0px -10px 0px var(--color-white);
+  background-color: var(--color-white);
+  display: none;
+}
+
+.style-Mobile {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+@media (max-width: 1000px) {
+  .navegacao {
+    padding: 30px 90px;
+    width: 100%;
+  }
+  #menuMobile {
+    display: block;
+  }
+  .navegacao-list {
+    gap: 2rem;
+  }
+
+  .navegacao-list,
+  .logo-metaMask {
+    display: grid;
+  }
+
+  .logo-metaMask {
+    display: flex;
+  }
+
+  .style-Mobile {
+    background-color: #ff5b50;
+    display:none;
+    padding: 20px;
+    position: absolute;
+    right: 50px;
+    top: 90px;
+    text-align: center;
+
+  }
+
+  .icone-style::before{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-logo);
+    top: -13px;
+    right: 55px;
+     transform: rotate(50deg);
+  }
+  .js-listNav.ativo {
+    display: grid;
+    animation: show 1s forwards;
+    
+  }
+}
+ @keyframes show {
+   from {
+   opacity: 0;
+   transform: translateY(-30px);
+   }
+   to {
+    opacity: 1;
+    transform: translateY(0px);
+   }
+ }
+
+/* ************ card home - 01*************** */
+.card-01 {
+  width: var(--size-widht);
+  display: grid;
+  grid-template-columns: 1fr 570px 1fr;
+  gap: 20px;
+  color: var(--color-white);
+  margin: auto;
+  align-items: center;
+  margin-bottom: 90px;
+}
+
+.card-home-01 h2 {
+  margin-bottom: 60px;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.box-card-home-01 {
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+}
+
+.box-card-home-01 img {
+  width: 150px;
+}
+
+@media (max-width: 1000px) {
+  .card-01 {
+    width: 100%;
+    grid-template-columns: 1fr;
+    text-align: center;
+    place-items: center;
+  }
+  .box-card-home-01 {
+    justify-content: center;
+  }
+
+  .card-home-01 h2 {
+    padding: 90px;
+  }
+}
+/* *************** acrd-home-02 ****************** */
+.card-home-02 h2 {
+  font-size: 3rem;
+}
+
+/* *********** card home-03 *********** */
+.card-home-03 img {
+  width: 200px;
+}
+
+/* **************** card-02 ******************* */
+.card-02 {
+  width: var(--size-widht);
+  margin: auto;
+}
+
+.card-02-listIMG {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card-02-listIMG li img {
+  width: 300px;
+  border: 2px solid var(--color-white);
+}
+@media (max-width: 1000px) {
+  .card-02 {
+    width: 100%;
+  }
+  .card-02-listIMG {
+    flex-wrap: nowrap;
+    overflow: auto;
+    padding: 20px;
+    padding-bottom: 90px;
+  }
+
+  .card-home-02 h2 {
+    font-size: 1.5rem;
+    padding: 90px;
+  }
+}
+/* ****************** Main ************************ */
+main {
+  display: grid;
+  grid-template-columns: 600px 1fr;
+  margin-bottom: 200px;
+}
+
+.card-main-01 {
+  display: grid;
+  grid-row: 1 / 3;
+  text-align: center;
+  margin-top: 195px;
+  border-bottom: 2px solid var(--subtitle-color);
+}
+
+.card-main-01 > span h1 {
+  color: var(--color-white);
+  font-size: 3rem;
+}
+
+.card-main-01 > span p {
+  color: var(--subtitle-color);
+  font-weight: 700;
+}
+
+/* ************ card-main-02  **************** */
+
+.card-main-02 {
+  color: var(--color-white);
+  display: flex;
+  gap: 150px;
+  padding: 150px 90px 90px 90px;
+  border-left: 2px solid var(--subtitle-color);
+}
+
+.card-main-02 article {
+  width: 435px;
+}
+
+.card-main-02 article p {
+  margin-bottom: 90px;
+}
+
+.card-main-02 article p a {
+  color: var(--color-logo);
+}
+
+.card-main-02 article a:nth-child(2) {
+  color: var(--color-white);
+  text-decoration: revert;
+}
+@media (max-width: 1000px) {
+  .card-main-01 {
+    grid-row: 1;
+  }
+
+  .card-main-02 {
+    text-align: center;
+  }
+  .card-main-01 > span h1 {
+    font-size: 1.5rem;
+  }
+
+  .card-main-02 article {
+    width: auto;
+  }
+}
+/************  card-main-03 ****************  */
+.card-main-03 {
+  grid-column: 2;
+}
+
+@media (max-width: 1000px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 100px;
+  }
+
+  .card-main-01 {
+    border-bottom: none;
+  }
+
+  .card-main-02 {
+    border-left: none;
+    display: grid;
+  }
+
+  .card-main-03 {
+    grid-column: 1;
+    margin: auto;
+  }
+}
+
+/* ******************** #popular of the week ************************* */
+#popular-of-the-week {
+  width: var(--size-widht);
+  margin: auto;
+  margin-bottom: 200px;
+}
+
+#popular-of-the-week li > div {
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+}
+
+#popular-of-the-week li > div p:nth-child(1) {
+  color: var(--subtitle-color);
+  font-weight: 700;
+}
+
+#popular-of-the-week li > div p:nth-child(2) {
+  color: var(--color-logo);
+}
+
+#popular-of-the-week li > div img {
+  width: 20px;
+}
+
+#popular-of-the-week h1 {
+  color: var(--color-white);
+  margin-bottom: 200px;
+  font-size: 3rem;
+}
+
+#popular-of-the-week h2 {
+  color: var(--color-white);
+}
+
+#popular-of-the-week li > div {
+  margin-bottom: 30px;
+}
+
+.popupar-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+}
+
+.popupar-list li {
+  margin: auto;
+}
+
+.popupar-list li:nth-child(1) {
+  border-right: 2px solid var(--subtitle-color);
+  padding-right: 180px;
+}
+.img-list {
+  width: 400px;
+}
+
+@media (max-width: 1000px) {
+  .popupar-list {
+    grid-template-columns: 1fr;
+    margin-bottom: 90px;
+  }
+  .popupar-list li:nth-child(1) {
+    border-right: none;
+    padding-right: 0px;
+  }
+
+  #popular-of-the-week {
+    width: 100%;
+  }
+  #popular-of-the-week h1 {
+    text-align: center;
+    padding-left: 0px;
+    font-size: 2rem;
+    margin-bottom: 60px;
+  }
+}
+/* *************** best-artists ******************* */
+#best-artists {
+  width: var(--size-widht);
+  margin: auto;
+}
+
+#best-artists h1 {
+  color: var(--color-white);
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 90px;
+}
+
+#best-artists li > div {
+  display: flex;
+  gap: 30px;
+  width: 300px;
+  align-items: center;
+  padding: 20px 30px;
+}
+
+#best-artists li > div h3 {
+  margin-bottom: 10px;
+  color: var(--color-white);
+}
+
+.best-artists-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 90px;
+  margin-bottom: 90px;
+}
+
+.best-artists-list-img img {
+  width: 90px;
+}
+
+#card-anaSilva {
+  background-color: #ff5b50;
+  color: var(--color-white);
+  border-radius: 10px;
+}
+
+#p-artistas {
+  color: var(--color-white);
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+#p-artistas img {
+  width: 15px;
+  margin-bottom: 90px;
+}
+
+@media (max-width: 1000px) {
+  .best-artists-list {
+    flex-wrap: nowrap;
+    overflow: auto;
+    padding-bottom: 90px;
+  }
+  #best-artists {
+    width: 100%;
+  }
+
+  #best-artists h1 {
+    font-size: 2rem;
+  }
+}
+/* ************************** */
+
+footer {
+  background-color: var(--card-color);
+  transition: 0.3s;
+}
+
+footer a:hover {
+  color: #fff;
+  text-decoration: revert;
+}
+
+.logo-footer {
+  width: var(--size-widht);
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  margin-bottom: 90px;
+  padding-top: 90px;
+}
+
+.logo-footer h1 {
+  color: var(--color-white);
+}
+
+.logo-footer > div {
+  background-color: var(--color-logo);
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+}
+
+.logo-footer > div img {
+  width: 30px;
+}
+
+@media (max-width: 1000px) {
+  .logo-footer {
+    width: 100%;
+    padding: 20px;
+  }
+}
+/* ****************** card-footer ********************** */
+.border-footer {
+  border: 2px solid var(--subtitle-color);
+  margin-bottom: 90px;
+}
+.card-footer {
+  width: var(--size-widht);
+  margin: auto;
+  display: flex;
+  gap: 30px;
+}
+
+.card-input {
+  border-right: 2px solid var(--subtitle-color);
+  padding: 90px 130px 90px 0px;
+}
+
+.card-input h2 {
+  color: var(--color-white);
+  margin-bottom: 30px;
+}
+
+.card-input > div input {
+  padding: 20px;
+  border: none;
+  background-color: var(--color-input);
+  outline: 0;
+  color: var(--color-white);
+}
+
+.card-input > div button {
+  border: none;
+  padding: 20px;
+  margin-left: -5px;
+  font-weight: bold;
+}
+
+@media (max-width: 1000px) {
+  .border-footer {
+    border: none;
+  }
+}
+/* ************* card links ******************* */
+.card-links {
+  display: flex;
+  margin: auto;
+  gap: 200px;
+}
+
+.card-links p {
+  color: var(--color-white);
+  margin-bottom: 10px;
+}
+
+.card-links li {
+  margin-bottom: 10px;
+}
+
+.card-links a {
+  color: var(--subtitle-color);
+}
+
+@media (max-width: 1000px) {
+  .card-footer {
+    width: 100%;
+    display: grid;
+  }
+
+  .card-input {
+    border-right: none;
+    padding: 20px;
+    margin: auto;
+  }
+
+  .card-links {
+    gap: 50px;
+  }
+
+  #p-artistas {
+    width: 100%;
+  }
+}
+/* **************** footer-redes-sociais ******************** */
+.footer-redes-sociais {
+  width: var(--size-widht);
+  margin: auto;
+  justify-content: space-between;
+  display: flex;
+  padding-bottom: 90px;
+}
+
+.footer-redes-sociais a {
+  color: var(--subtitle-color);
+}
+
+.footer-redes-sociais ul {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-redes-sociais ul li img {
+  width: 25px;
+}
+
+.footer-img-svg {
+  transition: 0.5s ease;
+}
+
+.footer-img-svg:hover {
+  border-bottom: 2px solid var(--color-white);
+  padding-bottom: 10px;
+}
+
+@media (max-width: 1000px) {
+  .footer-redes-sociais {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  footer a {
+    margin-bottom: 50px;
+  }
+}
